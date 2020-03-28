@@ -3,19 +3,22 @@
 // Токен: 72c21e45-064e-408d-8880-9cc3f4690a39
 // Идентификатор группы: cohort8
 // _id: "a4954c0f7488eea50ba868ce"
+
+import './pages/index.css';
+
+import { Api } from './scripts/api';
+import { Card } from './scripts/Card';
+import { Cardlist } from './scripts/CardList';
+import { FormValidator } from './scripts/FormValidator';
+import { NewPlace } from './scripts/NewPlace';
+import { PopupFoto } from './scripts/PopupFoto';
+import { PopupWithForm } from './scripts/PopupWithForm';
+import { PopupWithFormPlace } from './scripts/PopupWithFormPlace';
+import { UserInfo } from './scripts/UserInfo';
+
+
+
 (function() {
-
-
-    // const placeCard = document.querySelector('.place-card');
-    // const popupClose = document.querySelector('.popup__close');
-    // const popupEditClose = document.querySelector('.popup-edit__close-edit');
-    // const form = document.querySelector('.popup__form');
-    // const formEdit = document.querySelector('.popup__form-edit');
-    // const popupImage = document.querySelector('.popup-photo__image');
-    // const popupButton = document.querySelector('.popup__button');
-    // const popupEditButton = document.querySelector('.popup-edit__button-edit');
-    // const placeName = document.querySelector('.popup__input_type_name');
-    // const placeUrl = document.querySelector('.popup__input_type_link-url');
 
 
     const placesList = document.querySelector('.places-list');
@@ -28,21 +31,6 @@
     const popupPhoto = document.querySelector('.popup-photo');
     const popupImageClose = document.querySelector('.popup-photo__close-image');
 
-
-    // const objConst = {
-    //     placesList: document.querySelector('.places-list'),
-    //     button: document.querySelector('.user-info__button'),
-    //     buttonEdit: document.querySelector('.user-info__edit'),
-    //     popup: document.querySelector('.popup'),
-    //     popupEdit: document.querySelector('.popup-edit'),
-    //     userName: document.querySelector('.user-info__name'),
-    //     userJob: document.querySelector('.user-info__job'),
-    //     popupPhoto: document.querySelector('.popup-photo'),
-    //     popupImageClose: document.querySelector('.popup-photo__close-image'),
-    //     popupEditClose: document.querySelector('.popup-edit__close-edit'),
-    //     formEdit: document.querySelector('.popup__form-edit')
-    // }
-
     const ERROR_MESSAGES = {
         valueMissing: 'Это обязательное поле',
         tooShort: 'Должно быть от 2 до 30 символов',
@@ -51,13 +39,13 @@
         noError: ''
     }
 
-
+    const url = NODE_ENV === 'development' ? 'http://praktikum.tk/cohort8' : 'https://praktikum.tk/cohort8';
 
     // ЭКЗЕМПЛЯРЫ КЛАССОВ
 
     const card = new Card();
     const api = new Api({
-        baseUrl: 'https://praktikum.tk/cohort8',
+        baseUrl: url,
         headers: {
             authorization: '72c21e45-064e-408d-8880-9cc3f4690a39',
             'Content-Type': 'application/json'
@@ -109,108 +97,3 @@
 
 
 })()
-//----------------------------------------------------------------------
-
-/**
- * Добрый день!
- *
- * отправляю на проверку только обязательные задания, так как по времени не успеваю все правильно выполнить в срок.
- * Буду доделывать дополнительные задания в течении каникул.
- *
- * заранее спасибо за понимание!
- */
-
-
-
-
-
-
-
-/********************************************************************************************************************************************
-
-REVIEW. Резюме.
-
-По 9-му заданию.
-
-В чём достигнут успех.
-
-1.Взаимодействие с сервером при сабмите формы профиля происходит почти правильно.
-2. Информация о профиле берётся из объекта ответа сервера и переносится на страницу, форма закрывается
-только после успешного ответа сервера.
-3. Методы класса Api имеют правильную структуру.
-4. Обработка ответа сервера происходит вне методов класса Api.
-
-
-Что надо исправить по 9-му заданию.
-
-1. В классе UserInfo создать метод обработки адреса аватара, который возвращает сервер при загрузке страницы (подробнее об этом
- методе см. в комментарии в модуле класса UserInfo).
-2.Вызывать этот метод при загрузке страницы в нужном месте. По поводу вызова этого метода -  комментарий в script.js
-в Promise.all.
-
-3. Не передавать на сервер при сабмите формы профиля аватар, передавать
-только информацию из полей формы (подробности в комментариях в  Popup.js).
-
-
-Что надо исправить по предыдущим заданиям.
-
-1.Обернуть весь код script.js в IIFE функцию (задание 8).
-2. Требования о месте определени констант проекта читайте в комментприях в модуле Popup.js и PopupWithFormPlace.js,
-но это нужно исправить во всех классах.
- (задание 8).
-3. Придавать форме профиля валидный вид при её открытии. Так как при открытии в эту форму всегда вносится валидная информация,
-на форме при открытии кнопка "Сохранить" должна быть доступна и чёрного цвета (подробности в комментариях в  Popup.js в методе open()).
-(задание 7).
-
-
-*/
-
-/**
- * Игорь Лисянский/ 25.02
- *
- * Что надо исправить по 9-му заданию.
-
-1. В классе UserInfo создать метод обработки адреса аватара, который возвращает сервер при загрузке страницы (подробнее об этом методе см. в комментарии в модуле класса UserInfo).
-- OK
-
-2.Вызывать этот метод при загрузке страницы в нужном месте. По поводу вызова этого метода -  комментарий в script.js
-в Promise.all.
-- OK
-
-3. Не передавать на сервер при сабмите формы профиля аватар, передавать
-только информацию из полей формы (подробности в комментариях в  Popup.js).
-- OK
-
-Что надо исправить по предыдущим заданиям.
-
-1.Обернуть весь код script.js в IIFE функцию (задание 8).
-
-2. Требования о месте определени констант проекта читайте в комментприях в модуле Popup.js и PopupWithFormPlace.js,
-но это нужно исправить во всех классах.
-(задание 8).
-
-3. Придавать форме профиля валидный вид при её открытии. Так как при открытии в эту форму всегда вносится валидная информация, на форме при открытии кнопка
-"Сохранить" должна быть доступна и чёрного цвета (подробности в комментариях в  Popup.js в методе open()).
-(задание 7).
-
-
-*****************************************************************************************************************************************
-
-REVIEW2. Резюме2.
-
-Что надо доделать.
-
-Исправлены все ошибки, кроме
-2. Требования о месте определения констант проекта
-(задание 8).
-Читайте  об этом в комментприи в начале этого модуля.
-
-
-REVIEW3. Резюме3.
-
-Ошибки исправлены. Обязательные требования выполнены. Код организован логично.
-Отлично, что Вы передаёте в конструктор класса PopupWithFormPlace как параметры селекторы классов DOM-элементов, это делает класс независимым
-от конкретных значений этих селекторов.
-
-Задание принято!
-*/

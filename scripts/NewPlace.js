@@ -1,7 +1,7 @@
 //Добавление нового места
 
 
-class NewPlace {
+export class NewPlace {
     constructor(container) {
         this.nameContainer = container.querySelector('.popup__input_type_name');
         this.urlContainer = container.querySelector('.popup__input_type_link-url');

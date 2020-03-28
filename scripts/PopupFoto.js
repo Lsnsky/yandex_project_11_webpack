@@ -1,7 +1,7 @@
 //Открытие фотографий в popup
 
 
-class PopupFoto {
+export class PopupFoto {
 
     constructor(popup) {
 

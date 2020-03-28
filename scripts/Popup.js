@@ -1,4 +1,4 @@
-class Popup {
+export class Popup {
     constructor(popup, nameUser, nameJob) {
         this.popup = popup;
         this.popup.querySelector('.popup-edit__close-edit').addEventListener('click', () => {

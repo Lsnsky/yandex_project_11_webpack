@@ -1,4 +1,6 @@
-class PopupWithForm extends Popup {
+import { Popup } from './Popup';
+
+export class PopupWithForm extends Popup {
     constructor(popup, nameUser, nameJob, nameSelector, jobSelector, userInfo, api) {
         super(popup, nameUser, nameJob);
 

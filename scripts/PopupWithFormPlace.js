@@ -1,4 +1,6 @@
-class PopupWithFormPlace extends PopupNewPlace {
+import { PopupNewPlace } from './PopupNewPlace';
+
+export class PopupWithFormPlace extends PopupNewPlace {
     /* REVIEW3. Здесь Вы передаёте как параметры селекторы классов элементов, и это хорошо - это делает класс независимым от конкретных значений этих селекторов.
     В ООП так и надо стараться по-возможности.*/
     constructor(popup, cardList, nameSelector, linkSelector) {

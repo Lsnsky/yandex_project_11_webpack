@@ -1,8 +1,13 @@
-@import url(../__content/popup__content.css);
+/* @import url(../__content/popup__content.css); */
+
 @import url(../popup-edit/__close-edit/popup-edit__close-edit.css);
-@import url(../__title/popup__title.css);
+
+/* @import url(../__title/popup__title.css); */
+
 @import url(../popup-edit/__form-edit/popup__form-edit.css);
-@import url(../__input/popup__input.css);
+
+/* @import url(../__input/popup__input.css); */
+
 @import url(../popup-edit/__button-edit/popup-edit__button-edit.css);
 @import url(../popup-edit/_is-opened/popup-edit_is-opened.css);
 @import url(../popup-edit/__button-disabled/popup-edit__button-disabled.css);

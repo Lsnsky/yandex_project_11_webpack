@@ -1,6 +1,6 @@
 //Редактирование профиля
 
-class UserInfo {
+export class UserInfo {
     constructor(container) {
         this.nameContainer = container.querySelector('.user-info__name');
         this.jobContainer = container.querySelector('.user-info__job');

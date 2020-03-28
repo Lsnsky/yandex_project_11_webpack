@@ -1,6 +1,6 @@
 //Валидация формы редактирования профиля
 
-class FormValidator {
+export class FormValidator {
 
     constructor(popup, ERROR_MESSAGES) {
         this.ERROR_MESSAGES = ERROR_MESSAGES;
