@@ -12,7 +12,7 @@
 <body>
     <div class="root">
         <header class="header root__section">
-            <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
+            <img src="<%=require('./images/logo.svg').default%>" alt="mesto logo" class="logo">
         </header>
         <div class="profile root__section">
             <div class="user-info">
@@ -47,7 +47,7 @@
         <div class="popup">
             <div class="popup__content">
 
-                <img src="<%=require('./images/close.svg')%>" alt="close" class="popup__close">
+                <img src="<%=require('./images/close.svg').default%>" alt="close" class="popup__close">
                 <h3 class="popup__title">Новое место</h3>
                 <form class="form popup__form" name="new" novalidate>
                     <div class="input__container">
@@ -65,7 +65,7 @@
 
         <div class="popup-edit">
             <div class="popup__content">
-                <img src="<%=require('./images/close.svg')%>" alt="close-edit" class="popup-edit__close-edit">
+                <img src="<%=require('./images/close.svg').default%>" alt="close-edit" class="popup-edit__close-edit">
                 <h3 class="popup__title">Редактировать профиль</h3>
                 <form class="form popup__form-edit" name="edit" id="form" novalidate>
                     <div class="input__container">
@@ -82,7 +82,7 @@
         </div>
         <div class="popup-photo">
             <div class="popup-photo__content">
-                <img src="<%=require('./images/close.svg')%>" alt="close-photo" class="popup-photo__close-image">
+                <img src="<%=require('./images/close.svg').default%>" alt="close-photo" class="popup-photo__close-image">
                 <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg" alt="photo" class="popup-photo__image">
             </div>
         </div>
