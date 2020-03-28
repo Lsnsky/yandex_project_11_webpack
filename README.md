@@ -21,7 +21,7 @@
   
   
 
-Актуальная версия проекта (v1.0.3) доступна по этой [ссылке](https://lsnsky.github.io/yandex_project_11_webpack/)
+Актуальная версия проекта (v1.0.0) доступна по этой [ссылке](https://lsnsky.github.io/yandex_project_11_webpack/)
 
   
 
