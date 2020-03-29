@@ -4,7 +4,7 @@
 // Идентификатор группы: cohort8
 // _id: "a4954c0f7488eea50ba868ce"
 
-import './pages/index.css';
+import './index.css';
 
 import { Api } from './scripts/api';
 import { Card } from './scripts/Card';

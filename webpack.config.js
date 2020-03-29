@@ -8,7 +8,7 @@ const webpack = require('webpack');
 
 
 module.exports = {
-    entry: { main: './script.js' },
+    entry: { main: './src/index.js' },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
@@ -59,7 +59,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             inject: false,
-            template: './index.html',
+            template: './src/index.html',
             filename: 'index.html'
         }),
         new WebpackMd5Hash(),
